@@ -9,7 +9,7 @@ import { CheckBox } from '@rneui/themed';
 import React, { useState } from 'react';
 
 //Password Generator
-export default function Page(){
+/*export default function Page(){
   const [lowerCase, setLowerCase] = useState(true)
   const [upperCase, setUpperCase] = useState(false)
   const [numbers, setNumbers] = useState(false)
@@ -172,4 +172,36 @@ export default function Page(){
         </View>
       );
 
-  }
+  }*/
+
+//Render một số bát ký
+export default function RandomNumber() {
+  const styles = {
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      gap: '10px',
+      marginTop: '50px',
+    },
+    button: {
+      padding: '10px 20px',
+      fontSize: '20px',
+      cursor: 'pointer',
+    } 
+};
+  const [randomNumber, setRandomNumber] = useState(0);
+  const generateRandomNumber = () => {
+    const random = Math.floor(Math.random() * 100);
+      setRandomNumber(random);
+  };
+      
+  return (
+    <View style={styles.container}>
+      <h2>Số ngẫu nhiên: {randomNumber}</h2>
+      <button style={styles.button} onClick={generateRandomNumber}>Tạo số ngẫu nhiên</button>
+      </View>
+  );
+}
+  
