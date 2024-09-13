@@ -8,6 +8,7 @@ import {
 import { CheckBox } from '@rneui/themed';
 import React, { useState } from 'react';
 
+//Password Generator
 export default function Page(){
   const [lowerCase, setLowerCase] = useState(true)
   const [upperCase, setUpperCase] = useState(false)
